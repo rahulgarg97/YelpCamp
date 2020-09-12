@@ -25,13 +25,6 @@ mongoose.connect(process.env.DATABASEURL, {
 .then(() => console.log('Connected to DB!'))
 .catch(error => console.log(error.message));
 
-// mongoose.connect('mongodb+srv://rahulgarg97:password@123@cluster0.h1bxf.mongodb.net/yelp_camp?retryWrites=true&w=majority', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// })
-// .then(() => console.log('Connected to DB!'))
-// .catch(error => console.log(error.message));
-
 app.use(bodyParser.urlencoded({extended: true}))
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
